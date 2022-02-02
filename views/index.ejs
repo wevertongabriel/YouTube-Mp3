@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>YouTube Download mp3</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link type="text/css" rel="stylesheet"  href="/css/bootstrap.min.css">
+         <link type="text/css" rel="stylesheet"  href="/css/style.css">
+    </head>
+    <body>
+<div class="top-container">
+    <form action="/convert" method="POST" id="form">
+        <h1><i class="fab fa-youtube" aria-hidden="true"></i>Youtube conversor</h1>
+    
+        <h4>Link do video que deseja converter</h4>
+        <div>
+            <input type="text" name="videoLink" placeholder="Link do video"><button class="convert-btn">Convert</button> 
+        </div>
+    </form>
+</div> 
+
+<div class="bottom-container">
+    <% if(typeof success != "undefined" && success) { %>
+        <div class="success">
+            <p><%= song_title %></p>
+            <iframe width="460" height="215"
+             src="<%= video_link %>"
+              title="YouTube video player"
+               frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
+        </div>
+  <% } else if(typeof success != "undefined" && !success) { %>
+    <div class="errors">
+        <p><%= message %></p>
+    </div>
+    <% } %>
+</div>
+
+    </body>
+</html>

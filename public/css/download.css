@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  color: white;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.top-container{
+    height: 40vh;
+    background-color: red;
+}
+
+.bottom-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.success{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    width: 600px;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+.logo h1{
+    padding: 8%;
+    font-style: italic;
+    text-shadow: 1px 1px darkgray;
+}
+
+#download-btn{
+    width: fit-content;
+    color: black;
+    padding: 12px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px gray;
+    font-style: normal;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: inherit;
+    border: 1px solid red;
+    transition: 0.3s ease-out;
+}
+  
+#download-btn:hover{
+    color:black;
+    background-color:  white;
+    border: 1px solid  lightgray;
+    transform: scale(1.1);
+}
+  
+@media(max-width:768px){
+    .bottom-container{
+      width: 90%;
+      margin: auto;
+}
+  
+    .success{
+      text-align: center;
+      width: 100%;
+    }
+}
+  
