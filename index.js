@@ -33,7 +33,6 @@ app.post('/convert', async (req, res) => {
   if(videoid != null) {
     videoid = videoid[1]
     var link_video = `https://www.youtube.com/embed/${videoid}`
-    console.log(`o id e: ${videoid} o link e: ${link_video}`)
     const fetchAPI = await fetch(
       `https://youtube-mp36.p.rapidapi.com/dl?id=${videoid}`,{
       "method":"GET",
