@@ -82,8 +82,14 @@ p{
       width: 90%;
       margin: auto;
 }
-  
-    .success{
+.logo{
+  height: 15vh;
+}
+.top-container{
+  height: 25vh;
+  background-color: red;
+}
+.success{
       text-align: center;
       width: 100%;
     }
