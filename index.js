@@ -3,8 +3,6 @@ require('dotenv').config()
 //importações
 const express = require('express')
 const bodyParser = require('body-parser')
-const expressHandlebars = require('express-handlebars')
-const path = require('path')
 const fetch = require('node-fetch')
 
 //definindo porta
