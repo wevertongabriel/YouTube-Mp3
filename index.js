@@ -46,9 +46,9 @@ app.post('/convert', async (req, res) => {
       if(fetchResponseApi.status === "ok")
         return res.render("download", {success: true, classForm: formClass, video_link: link_video, song_title: fetchResponseApi.title, song_link: fetchResponseApi.link})
       else
-        return res.render("index", {success: false, message: fetchResponseApi.msg})
+        return res.render("download", {success: false, message: fetchResponseApi.msg})
   }else{
-    return res.render("index", {success: false, message: 'Adicione um link valido'})
+    return res.render("download", {success: false, message: 'Adicione um link valido'})
     }
 })
 
